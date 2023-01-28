@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="style.css">
+  
+  <title>Frontend Mentor | Interactive pricing component</title>
+
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+</head>
+<body>
+  <div class="titulo">
+    <h1 class="title">Simple, traffic-based pricing</h1>
+    <h2 class="subtitle text">Sign-up for our 30-day trial. No credit card required.</h2>
+  </div>
+  <main class="conteudo-principal">
+
+    <div class="container up-container"> 
+      <p class="pageviews text">50K PAGEVIEWS</p>
+      <p class="price">$<span id="rangeValue">16.00</span> <span class="month text">/ month</span></p>
+    </div>
+
+    <input class="slider" type="range" min="0" max="65" onchange="rangeSlide(this.value)">
+
+    <div class="switch-btn">
+      <p class="switch-text text monthly">Monthly Billing</p>
+
+      <label class="switch">
+        <input onchange="document.querySelector('p.monthly').style.color = this.checked ? 'hsl(225, 20%, 60%)' : 'hsl(174, 86%, 45%)', document.querySelector('p.yearly').style.color = this.checked ? 'hsl(174, 86%, 45%)' : 'hsl(225, 20%, 60%)'" type="checkbox" checked>
+        <span class="sliderS"></span>
+      </label>
+
+      <p class="switch-text text yearly">Yearly Billing <span class="discount">25% discount</span><span class="d-mobile">-25% Off</span></p>
+    </div>
+
+    <div class="container down-container">
+      <div class="check-section">
+        <div class="check">
+          <img class="check-img" src="images/icon-check.svg" alt="">
+          <p class="text">Unlimited websites</p>
+        </div>
+        <div class="check">
+          <img class="check-img" src="images/icon-check.svg" alt="">
+          <p class="text">100% data ownership</p>
+        </div>
+        <div class="check">
+          <img class="check-img" src="images/icon-check.svg" alt="">
+          <p class="text">Email reports</p>
+        </div>
+      </div>
+      <button class="btn">Start my trial</button>
+    </div>
+  </main>
+  <p class="ass">Made by: Bruno</p>
+
+  <!-- Simple, traffic-based pricing
+  Sign-up for our 30-day trial. No credit card required. 
+
+  Pageviews
+  $ /month
+
+  Monthly Billing
+  Yearly Billing 25% discount
+
+  Unlimited websites
+  100% data ownership
+  Email reports
+
+  Start my trial -->
+
+  <script type="text/javascript">
+    function rangeSlide(value) {
+      document.getElementById('rangeValue').innerHTML = value;
+    }
+  </script>
+</body>
+</html>
