@@ -291,7 +291,7 @@ input:checked + .sliderS:before {
         background-color: hsl(230, 100%, 99%);
         background-size: 1000px;
 
-        height: 750px;
+        height: 800px;
         display: flex;
         flex-direction: column-reverse;
     }
@@ -598,7 +598,7 @@ input:checked + .sliderS:before {
         background-color: hsl(230, 100%, 99%);
         background-size: 1000px;
 
-        height: 750px;
+        height: 800px;
         display: flex;
         flex-direction: column-reverse;
     }
